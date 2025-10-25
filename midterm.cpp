@@ -36,50 +36,93 @@ int main(int argc, char* argv[]) {
     string player2 = "";
     string player3 = "";
 
-    int player1Rocks = 0;
-    int player2Rocks = 0;
-    int player3Rocks = 0;
+    int p1Rocks = 0;
+    int p2Rocks = 0;
+    int p3Rocks = 0;
 
     const int NUM_PLAYERS = 3;
-    
+    double average = 0.0;
+
     cout << "Welcome to the World Rock Collector's Championship!" << endl << endl;
 
     cout << "Enter player 1 name: ";
     getline(cin, player1);
     cout << "How many rocks did " << player1 << " collect? ";
-    cin >> player1Rocks;
+    cin >> p1Rocks;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    if (player1Rocks < 0) {
+    if (p1Rocks < 0) {
       cout << "Can't have negative rocks. 0 will be entered." << endl;
-      player1Rocks = 0;
+      p1Rocks = 0;
     }
 
     cout << "Enter player 2 name: ";
     getline(cin, player2);
     cout << "How many rocks did " << player2 << " collect? ";
-    cin >> player2Rocks;
+    cin >> p2Rocks;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    if (player2Rocks < 0) {
+    if (p2Rocks < 0) {
       cout << "Can't have negative rocks. 0 will be entered." << endl;
-      player2Rocks = 0;
+      p2Rocks = 0;
     }
 
     cout << "Enter player 3 name: ";
     getline(cin, player3);
     cout << "How many rocks did " << player3 << " collect? ";
-    cin >> player3Rocks;
+    cin >> p3Rocks;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    if (player3Rocks < 0) {
+    if (p3Rocks < 0) {
       cout << "Can't have negative rocks. 0 will be entered." << endl;
-      player3Rocks = 0;
+      p3Rocks = 0;
     }
 
     // Calculations
 
     cout << fixed << setprecision(2);
     
-    double average = (player1Rocks + player2Rocks + player3Rocks) / static_cast<double>(NUM_PLAYERS);
-    cout << average;
+    average = (p1Rocks + p2Rocks + p3Rocks) / static_cast<double>(NUM_PLAYERS);
+    
+    if (p1Rocks == p2Rocks && p2Rocks == p3Rocks) {
+      cout << "It is a three way tie!!" << endl;
+    }
+    else if (p1Rocks == p2Rocks && p2Rocks > p3Rocks) {
+      cout << player1 << " and " << player2 << " are tied for first place." << endl;
+      cout << player3 << " is in second place." << endl;
+    }
+    else if (p1Rocks == p3Rocks && p3Rocks > p2Rocks) {
+      cout << player1 << " and " << player3 << " are tied for first place." << endl;
+      cout << player2 << " is in second place." << endl;
+    }
+    else if (p2Rocks == p3Rocks && p3Rocks > p1Rocks) {
+      cout << player2 << " and " << player3 << " are tied for first place." << endl;
+      cout << player1 << " is in second place." << endl;
+    }
+    else {
+      if (p1Rocks > p2Rocks && p1Rocks > p3Rocks) {
+        cout << player1 << " is in first place!" << endl;
+        if (p2Rocks == p3Rocks) {
+          cout << player2 << " and " << player3 << " are tied for second place." << endl;
+        }
+        else if (p2Rocks > p3Rocks) {
+          cout << player2 << " is in second place." << endl;
+          cout << player3 << " is in third place." << endl;
+        }
+        else {
+          cout << player3 << " is in second place." << endl;
+          cout << player2 << " is in third place." << endl;
+        }
+        }
+      }
+
+
+
+
+
+
+      
+    }
+
+
+
 
 
 
