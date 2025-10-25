@@ -143,7 +143,7 @@ int main(int argc, char* argv[]) {
   cout << fixed << setprecision(2);
   average = (p1Rocks + p2Rocks + p3Rocks) / static_cast<double>(NUM_PLAYERS);
 
-  cout << "The top three players collected an average of " << average << " rocks!" << endl << endl;
+  cout << endl << "The top three players collected an average of " << average << " rocks!" << endl << endl;
   
   cout << "Congragulations Winners! Come back next year!" << endl;
 
