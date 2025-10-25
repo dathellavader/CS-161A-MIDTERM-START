@@ -74,13 +74,10 @@ int main(int argc, char* argv[]) {
       cout << "Can't have negative rocks. 0 will be entered." << endl;
       p3Rocks = 0;
     }
+    cout << endl;
 
-    // Calculations
+    // Places
 
-    cout << fixed << setprecision(2);
-    
-    average = (p1Rocks + p2Rocks + p3Rocks) / static_cast<double>(NUM_PLAYERS);
-    
     if (p1Rocks == p2Rocks && p2Rocks == p3Rocks) {
       cout << "It is a three way tie!!" << endl;
     }
@@ -141,9 +138,14 @@ int main(int argc, char* argv[]) {
         }
       }
 
+// Calculations
 
+  cout << fixed << setprecision(2);
+  average = (p1Rocks + p2Rocks + p3Rocks) / static_cast<double>(NUM_PLAYERS);
 
-
+  cout << "The top three players collected an average of " << average << " rocks!" << endl << endl;
+  
+  cout << "Congragulations Winners! Come back next year!" << endl;
 
 
 
