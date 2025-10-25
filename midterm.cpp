@@ -112,15 +112,34 @@ int main(int argc, char* argv[]) {
         }
         }
       }
-
-
-
-
-
-
-      
-    }
-
+      if (p2Rocks > p1Rocks && p2Rocks > p3Rocks) {
+        cout << player2 << " is in first place!" << endl;
+        if (p1Rocks == p3Rocks) {
+          cout << player1 << " and " << player3 << " are tied for second place." << endl;
+        }
+        else if (p1Rocks > p3Rocks) {
+          cout << player1 << " is in second place." << endl;
+          cout << player3 << " is in third place." << endl;
+        }
+        else {
+          cout << player3 << " is in second place." << endl;
+          cout << player1 << " is in third place." << endl;
+      }
+      }
+      if (p3Rocks > p2Rocks && p3Rocks > p1Rocks) {
+        cout << player3 << " is in first place!" << endl;
+        if (p2Rocks == p1Rocks) {
+          cout << player1 << " and " << player2 << " are tied for second place." << endl;
+        }
+        else if (p1Rocks > p2Rocks) {
+          cout << player1 << " is in second place." << endl;
+          cout << player2 << " is in third place." << endl;
+        }
+        else {
+          cout << player2 << " is in second place." << endl;
+          cout << player1 << " is in third place." << endl;
+        }
+      }
 
 
 
