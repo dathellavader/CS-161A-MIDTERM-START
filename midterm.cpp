@@ -39,43 +39,47 @@ int main(int argc, char* argv[]) {
     int player1Rocks = 0;
     int player2Rocks = 0;
     int player3Rocks = 0;
+
+    const int NUM_PLAYERS = 3;
     
-    cout << "Welcome to the World Rock Collectors Championship!" << endl << endl;
+    cout << "Welcome to the World Rock Collector's Championship!" << endl << endl;
 
     cout << "Enter player 1 name: ";
     getline(cin, player1);
     cout << "How many rocks did " << player1 << " collect? ";
     cin >> player1Rocks;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
+    if (player1Rocks < 0) {
+      cout << "Can't have negative rocks. 0 will be entered." << endl;
+      player1Rocks = 0;
+    }
 
     cout << "Enter player 2 name: ";
     getline(cin, player2);
     cout << "How many rocks did " << player2 << " collect? ";
     cin >> player2Rocks;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    if (player2Rocks < 0) {
+      cout << "Can't have negative rocks. 0 will be entered." << endl;
+      player2Rocks = 0;
+    }
 
     cout << "Enter player 3 name: ";
     getline(cin, player3);
     cout << "How many rocks did " << player3 << " collect? ";
     cin >> player3Rocks;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-    if (player1Rocks < 0) {
-    cout << "Can't have negative rocks. 0 will be entered." << endl;
-    player1Rocks = 0;
-    }
-    else if (player2Rocks < 0) {
-    cout << "Can't have negative rocks. 0 will be entered." << endl;
-    player2Rocks = 0;
-    }
-    else if (player3Rocks < 0) {
-    cout << "Can't have negative rocks. 0 will be entered." << endl;
-    player3Rocks = 0;
+    if (player3Rocks < 0) {
+      cout << "Can't have negative rocks. 0 will be entered." << endl;
+      player3Rocks = 0;
     }
 
+    // Calculations
 
-
+    cout << fixed << setprecision(2);
+    
+    double average = (player1Rocks + player2Rocks + player3Rocks) / static_cast<double>(NUM_PLAYERS);
+    cout << average;
 
 
 
