@@ -11,16 +11,16 @@
 
 
 // ------------- DESIGN DOCUMENT -------------
-// A. INPUT ✅: 
-// B. OUTPUT ✅:
-// C. CALCULATIONS ✅:
-// D. LOGIC and ALGORITHMS ✅:
+// A. INPUT ✅: yes
+// B. OUTPUT ✅: yes
+// C. CALCULATIONS ✅: yes
+// D. LOGIC and ALGORITHMS ✅: yes
 //    (Optional) flow chart link or file name: 
 
 
 // ------------- TESTING -------------
-// PASS ALL GIVEN SAMPLE RUN TESTS ✅: 
-// (Optional) Additional tests count:   
+// PASS ALL GIVEN SAMPLE RUN TESTS ✅: 3
+// (Optional) Additional tests count: 8  
 
 
 // ------------- CODE -------------
@@ -145,7 +145,7 @@ int main(int argc, char* argv[]) {
 
   cout << endl << "The average number of rocks collected by the top three players is " << average << " rocks!" << endl << endl;
   
-  cout << "Congragulations Winners! Come back next year!" << endl;
+  cout << "Congratulations Winners! Come back next year!" << endl;
 
 
 
@@ -171,7 +171,6 @@ A. INPUT
     int p3Rocks = 0;
 
     const int NUM_PLAYERS = 3;
-    double average = 0.0;
 
 B. OUTPUT
 double average = 0.00;
