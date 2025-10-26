@@ -253,7 +253,7 @@ ELSE
 // DO CALCULATIONS
 
 DISPLAY "The average number of rocks collected by the top three players is " average " rocks!"
-MESSAGE "Congragulations Winners! Come back next year!"
+MESSAGE "Congratulations Winners! Come back next year!"
 
 
 SAMPLE RUNS
